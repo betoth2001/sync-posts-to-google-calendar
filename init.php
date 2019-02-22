@@ -4,7 +4,7 @@
  *
  * This file can use syntax from the required level of PHP or later.
  *
- * @package      Gamajo\PluginSlug
+ * @package      betoth2001\sync-posts-to-google-calendar
  * @author       Gary Jones
  * @copyright    2017 Gamajo
  * @license      GPL-2.0+
@@ -12,7 +12,7 @@
 
 declare( strict_types = 1 );
 
-namespace Gamajo\PluginSlug;
+namespace betoth2001\sync-posts-to-google-calendar;
 
 use BrightNucleus\Config\ConfigFactory;
 
@@ -21,13 +21,13 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! defined( 'PLUGIN_SLUG_DIR' ) ) {
+if ( ! defined( 'sync-posts-to-google-calendar_DIR' ) ) {
 	// phpcs:ignore NeutronStandard.Constants.DisallowDefine.Define
-	define( 'PLUGIN_SLUG_DIR', plugin_dir_path( __FILE__ ) );
+	define( 'sync-posts-to-google-calendar_DIR', plugin_dir_path( __FILE__ ) );
 }
-if ( ! defined( 'PLUGIN_SLUG_URL' ) ) {
+if ( ! defined( 'sync-posts-to-google-calendar_URL' ) ) {
 	// phpcs:ignore NeutronStandard.Constants.DisallowDefine.Define
-	define( 'PLUGIN_SLUG_URL', plugin_dir_url( __FILE__ ) );
+	define( 'sync-posts-to-google-calendar_URL', plugin_dir_url( __FILE__ ) );
 }
 
 // Load Composer autoloader.
@@ -36,5 +36,5 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 }
 
 // Initialize the plugin.
-$GLOBALS['plugin_slug'] = new Plugin( ConfigFactory::create( __DIR__ . '/config/defaults.php' )->getSubConfig( 'Gamajo\PluginSlug' ) );
-$GLOBALS['plugin_slug']->run();
+$GLOBALS['sync-posts-to-google-calendar'] = new Plugin( ConfigFactory::create( __DIR__ . '/config/defaults.php' )->getSubConfig( 'betoth2001\sync-posts-to-google-calendar' ) );
+$GLOBALS['sync-posts-to-google-calendar']->run();

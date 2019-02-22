@@ -4,7 +4,7 @@
  *
  * This file should only use syntax available in PHP 5.2.4 or later.
  *
- * @package      Gamajo\PluginSlug
+ * @package      betoth2001\sync-posts-to-google-calendar
  * @author       Gary Jones
  * @copyright    2017 Gamajo
  * @license      GPL-2.0-or-later
@@ -16,7 +16,7 @@
  * Version:           0.1.0
  * Author:            Gary Jones
  * Author URI:        https://gamajo.com
- * Text Domain:       plugin-slug
+ * Text Domain:       sync-posts-to-google-calendar
  * License:           GPL-2.0-or-later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * GitHub Plugin URI: https://github.com/garyjones/...
@@ -30,29 +30,29 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 if ( version_compare( PHP_VERSION, '7.1', '<' ) ) {
-	add_action( 'plugins_loaded', 'plugin_slug_init_deactivation' );
+	add_action( 'plugins_loaded', 'sync-posts-to-google-calendar_init_deactivation' );
 
 	/**
 	 * Initialise deactivation functions.
 	 */
-	function plugin_slug_init_deactivation() {
+	function sync-posts-to-google-calendar_init_deactivation() {
 		if ( current_user_can( 'activate_plugins' ) ) {
-			add_action( 'admin_init', 'plugin_slug_deactivate' );
-			add_action( 'admin_notices', 'plugin_slug_deactivation_notice' );
+			add_action( 'admin_init', 'sync-posts-to-google-calendar_deactivate' );
+			add_action( 'admin_notices', 'sync-posts-to-google-calendar_deactivation_notice' );
 		}
 	}
 
 	/**
 	 * Deactivate the plugin.
 	 */
-	function plugin_slug_deactivate() {
+	function sync-posts-to-google-calendar_deactivate() {
 		deactivate_plugins( plugin_basename( __FILE__ ) );
 	}
 
 	/**
 	 * Show deactivation admin notice.
 	 */
-	function plugin_slug_deactivation_notice() {
+	function sync-posts-to-google-calendar_deactivation_notice() {
 		$notice = sprintf(
 			// Translators: 1: Required PHP version, 2: Current PHP version.
 			'<strong>Plugin Boilerplate</strong> requires PHP %1$s to run. This site uses %2$s, so the plugin has been <strong>deactivated</strong>.',

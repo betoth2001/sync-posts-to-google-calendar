@@ -2,7 +2,7 @@
 /**
  * Plugin configuration file
  *
- * @package      Gamajo\PluginSlug
+ * @package      betoth2001\sync-posts-to-google-calendar
  * @author       Gary Jones
  * @copyright    2017 Gamajo
  * @license      GPL-2.0+
@@ -10,28 +10,28 @@
 
 declare( strict_types = 1 );
 
-namespace Gamajo\PluginSlug;
+namespace betoth2001\sync-posts-to-google-calendar;
 
-$plugin_slug_plugin = [
-	'textdomain'    => 'plugin-slug',
+$sync-posts-to-google-calendar_plugin = [
+	'textdomain'    => 'sync-posts-to-google-calendar',
 	'languages_dir' => 'languages',
 ];
 
-$plugin_slug_settings = [
+$sync-posts-to-google-calendar_settings = [
 	'submenu_pages' => [
 		[
 			'parent_slug'  => 'options-general.php',
-			'page_title'   => __( 'Plugin Slug Settings', 'plugin-slug' ),
-			'menu_title'   => __( 'Plugin Slug', 'plugin-slug' ),
+			'page_title'   => __( 'Plugin Slug Settings', 'sync-posts-to-google-calendar' ),
+			'menu_title'   => __( 'Plugin Slug', 'sync-posts-to-google-calendar' ),
 			'capability'   => 'manage_options',
-			'menu_slug'    => 'plugin-slug',
-			'view'         => PLUGIN_SLUG_DIR . 'views/admin-page.php',
+			'menu_slug'    => 'sync-posts-to-google-calendar',
+			'view'         => sync-posts-to-google-calendar_DIR . 'views/admin-page.php',
 			'dependencies' => [
 				'styles'   => [],
 				'scripts'  => [
 					[
-						'handle'    => 'plugin-slug-js',
-						'src'       => PLUGIN_SLUG_URL . 'js/admin-page.js',
+						'handle'    => 'sync-posts-to-google-calendar-js',
+						'src'       => sync-posts-to-google-calendar_URL . 'js/admin-page.js',
 						'deps'      => [ 'jquery' ],
 						'ver'       => '1.2.3',
 						'in_footer' => true,
@@ -44,7 +44,7 @@ $plugin_slug_settings = [
 							return true;
 						},
 						'localize'  => [
-							'name' => 'pluginSlugI18n',
+							'name' => 'sync-posts-to-google-calendarI18n',
 							// phpcs:ignore NeutronStandard.Functions.TypeHint.NoArgumentType -- Mixed type
 							'data' => function ( $context ): array {
 								return [
@@ -64,16 +64,16 @@ $plugin_slug_settings = [
 	],
 	'settings'      => [
 		'setting1' => [
-			'option_group'      => 'pluginslug',
+			'option_group'      => 'sync-posts-to-google-calendar',
 			'sanitize_callback' => null,
 			'sections'          => [
 				'section1' => [
-					'title'  => __( 'My Section Title', 'plugin-slug' ),
-					'view'   => PLUGIN_SLUG_DIR . 'views/section1.php',
+					'title'  => __( 'My Section Title', 'sync-posts-to-google-calendar' ),
+					'view'   => sync-posts-to-google-calendar_DIR . 'views/section1.php',
 					'fields' => [
 						'field1' => [
-							'title' => __( 'My Field Title', 'plugin-slug' ),
-							'view'  => PLUGIN_SLUG_DIR . 'views/field1.php',
+							'title' => __( 'My Field Title', 'sync-posts-to-google-calendar' ),
+							'view'  => sync-posts-to-google-calendar_DIR . 'views/field1.php',
 						],
 					],
 				],
@@ -84,9 +84,9 @@ $plugin_slug_settings = [
 
 return [
 	'Gamajo' => [
-		'PluginSlug' => [
-			'Plugin'   => $plugin_slug_plugin,
-			'Settings' => $plugin_slug_settings,
+		'sync-posts-to-google-calendar' => [
+			'Plugin'   => $sync-posts-to-google-calendar_plugin,
+			'Settings' => $sync-posts-to-google-calendar_settings,
 		],
 	],
 ];

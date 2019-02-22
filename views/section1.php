@@ -2,7 +2,7 @@
 /**
  * Admin page section view
  *
- * @package      Gamajo\PluginSlug
+ * @package      betoth2001\sync-posts-to-google-calendar
  * @author       Gary Jones
  * @copyright    2017 Gamajo
  * @license      GPL-2.0+

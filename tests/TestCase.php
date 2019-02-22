@@ -2,7 +2,7 @@
 /**
  * Base unit test case
  *
- * @package      Gamajo\PluginSlug\Tests
+ * @package      betoth2001\sync-posts-to-google-calendar\Tests
  * @author       Gary Jones
  * @copyright    2017 Gamajo
  * @license      GPL-2.0+
@@ -10,7 +10,7 @@
 
 declare( strict_types = 1 );
 
-namespace Gamajo\PluginSlug\Tests;
+namespace betoth2001\sync-posts-to-google-calendar\Tests;
 
 use Brain\Monkey;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
@@ -19,7 +19,7 @@ use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 /**
  * Abstract base class for all test case implementations.
  *
- * @package Gamajo\PluginSlug\Tests
+ * @package betoth2001\sync-posts-to-google-calendar\Tests
  * @since   1.0.0
  */
 abstract class TestCase extends PHPUnitTestCase {

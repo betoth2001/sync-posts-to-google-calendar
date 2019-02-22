@@ -2,7 +2,7 @@
 /**
  * Integration tests for Foo
  *
- * @package      Gamajo\PluginSlug\Tests\Integration
+ * @package      betoth2001\sync-posts-to-google-calendar\Tests\Integration
  * @author       Gary Jones
  * @copyright    2017 Gamajo
  * @license      GPL-2.0+
@@ -10,9 +10,9 @@
 
 declare( strict_types = 1 );
 
-namespace Gamajo\PluginSlug\Tests\Integration;
+namespace betoth2001\sync-posts-to-google-calendar\Tests\Integration;
 
-use Gamajo\PluginSlug\Foo as Testee;
+use betoth2001\sync-posts-to-google-calendar\Foo as Testee;
 use WP_UnitTestCase;
 
 /**

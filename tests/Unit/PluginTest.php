@@ -2,7 +2,7 @@
 /**
  * Unit tests for Plugin
  *
- * @package      Gamajo\PluginSlug\Tests\Unit
+ * @package      betoth2001\sync-posts-to-google-calendar\Tests\Unit
  * @author       Gary Jones
  * @copyright    2017 Gamajo
  * @license      GPL-2.0+
@@ -10,13 +10,13 @@
 
 declare( strict_types = 1 );
 
-namespace Gamajo\PluginSlug\Tests\Unit;
+namespace betoth2001\sync-posts-to-google-calendar\Tests\Unit;
 
 use Brain\Monkey\Functions;
 use BrightNucleus\Config\ConfigFactory;
 use BrightNucleus\Config\ConfigInterface;
-use Gamajo\PluginSlug\Plugin as Testee;
-use Gamajo\PluginSlug\Tests\TestCase;
+use betoth2001\sync-posts-to-google-calendar\Plugin as Testee;
+use betoth2001\sync-posts-to-google-calendar\Tests\TestCase;
 
 /**
  * Foo test case.

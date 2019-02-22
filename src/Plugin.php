@@ -2,7 +2,7 @@
 /**
  * Main plugin file
  *
- * @package      Gamajo\PluginSlug
+ * @package      betoth2001\sync-posts-to-google-calendar
  * @author       Gary Jones
  * @copyright    2017 Gamajo
  * @license      GPL-2.0+
@@ -10,7 +10,7 @@
 
 declare( strict_types = 1 );
 
-namespace Gamajo\PluginSlug;
+namespace betoth2001\sync-posts-to-google-calendar;
 
 use BrightNucleus\Config\ConfigInterface;
 use BrightNucleus\Config\ConfigTrait;
@@ -22,7 +22,7 @@ use BrightNucleus\Settings\Settings;
  *
  * @since   0.1.0
  *
- * @package Gamajo\PluginSlug
+ * @package betoth2001\sync-posts-to-google-calendar
  * @author  Gary Jones
  */
 class Plugin {

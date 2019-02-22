@@ -40,7 +40,7 @@ Check out the Codex for more information about [installing plugins manually](htt
 In a terminal, browse to your `/wp-content/plugins/` directory and clone this repository:
 
 ~~~sh
-git clone git@github.com:GaryJones/plugin-slug.git
+git clone git@github.com:betoth2001/sync-posts-to-google-calendar.git
 ~~~
 
 Then go to your Plugins screen and click __Activate__.
@@ -48,7 +48,7 @@ Then go to your Plugins screen and click __Activate__.
 ### Composer
 
 ~~~sh
-compose require gamajo/plugin-slug
+compose require betoth2001/sync-posts-to-google-calendar
 ~~~
 
 ## Updates
