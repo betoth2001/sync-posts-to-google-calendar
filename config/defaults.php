@@ -3,21 +3,21 @@
  * Plugin configuration file
  *
  * @package      betoth2001\sync-posts-to-google-calendar
- * @author       Gary Jones
- * @copyright    2017 Gamajo
- * @license      GPL-2.0+
+ * @author       Bryan Toth
+ * @copyright    2019
+ * @license      MIT
  */
 
 declare( strict_types = 1 );
 
-namespace betoth2001\sync-posts-to-google-calendar;
+namespace betoth2001\sync_posts_to_google_calendar;
 
-$sync-posts-to-google-calendar_plugin = [
+$sync_posts_to_google_calendar_plugin = [
 	'textdomain'    => 'sync-posts-to-google-calendar',
 	'languages_dir' => 'languages',
 ];
 
-$sync-posts-to-google-calendar_settings = [
+$sync_posts_to_google_calendar_settings = [
 	'submenu_pages' => [
 		[
 			'parent_slug'  => 'options-general.php',
@@ -25,13 +25,13 @@ $sync-posts-to-google-calendar_settings = [
 			'menu_title'   => __( 'Plugin Slug', 'sync-posts-to-google-calendar' ),
 			'capability'   => 'manage_options',
 			'menu_slug'    => 'sync-posts-to-google-calendar',
-			'view'         => sync-posts-to-google-calendar_DIR . 'views/admin-page.php',
+			'view'         => sync_posts_to_google_calendar_DIR . 'views/admin-page.php',
 			'dependencies' => [
 				'styles'   => [],
 				'scripts'  => [
 					[
 						'handle'    => 'sync-posts-to-google-calendar-js',
-						'src'       => sync-posts-to-google-calendar_URL . 'js/admin-page.js',
+						'src'       => sync_posts_to_google_calendar_URL . 'js/admin-page.js',
 						'deps'      => [ 'jquery' ],
 						'ver'       => '1.2.3',
 						'in_footer' => true,
@@ -69,11 +69,11 @@ $sync-posts-to-google-calendar_settings = [
 			'sections'          => [
 				'section1' => [
 					'title'  => __( 'My Section Title', 'sync-posts-to-google-calendar' ),
-					'view'   => sync-posts-to-google-calendar_DIR . 'views/section1.php',
+					'view'   => sync_posts_to_google_calendar_DIR . 'views/section1.php',
 					'fields' => [
 						'field1' => [
 							'title' => __( 'My Field Title', 'sync-posts-to-google-calendar' ),
-							'view'  => sync-posts-to-google-calendar_DIR . 'views/field1.php',
+							'view'  => sync_posts_to_google_calendar_DIR . 'views/field1.php',
 						],
 					],
 				],
@@ -83,10 +83,10 @@ $sync-posts-to-google-calendar_settings = [
 ];
 
 return [
-	'Gamajo' => [
+	'betoth2001' => [
 		'sync-posts-to-google-calendar' => [
-			'Plugin'   => $sync-posts-to-google-calendar_plugin,
-			'Settings' => $sync-posts-to-google-calendar_settings,
+			'Plugin'   => $sync_posts_to_google_calendar_plugin,
+			'Settings' => $sync_posts_to_google_calendar_settings,
 		],
 	],
 ];
